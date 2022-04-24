@@ -147,3 +147,12 @@ describe("5種類の商品購入ボタン", () => {
     expect(screen.getByTestId("beer-count")).toHaveTextContent("0");
   });
 });
+
+describe("商品数と合計金額", () => {
+  it("初期値を0として商品数と合計金額が表示される", () => {
+    render(<App />);
+
+    expect(screen.getByText("商品数: 0 個")).toBeInTheDocument();
+    expect(screen.getByText("合計金額: 0 円")).toBeInTheDocument();
+  });
+});
