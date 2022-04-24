@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { Button } from "./Button";
-import { Badge } from "./Badge";
+import { Button } from "../../ui/Button";
+import { Badge } from "../../ui/Badge";
 
 type Props = {
   id: string;
