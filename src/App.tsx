@@ -5,7 +5,7 @@ export const CURRENCY_TYPE = "円";
 export const App: React.FC = () => {
   return (
     <div className="flex h-screen">
-      <div className="m-auto">
+      <div className="m-auto flex gap-x-20">
         <div className="flex flex-col gap-5">
           <PurchaseButton
             id={"coffee"}
@@ -37,6 +37,13 @@ export const App: React.FC = () => {
             price={580}
             currencyType={CURRENCY_TYPE}
           />
+        </div>
+        <div className="flex flex-col justify-center">
+          <div>お会計</div>
+          <div className="flex flex-col">
+            <span id="count">商品数: 0 個</span>
+            <span id="price">合計金額: 0 円</span>
+          </div>
         </div>
       </div>
     </div>
