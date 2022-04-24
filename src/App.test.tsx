@@ -124,4 +124,26 @@ describe("5種類の商品購入ボタン", () => {
       expect(screen.getByTestId("beer-count")).toHaveTextContent("1");
     });
   });
+
+  it("ボタンをクリックすると対象商品の注文回数のカウントのみが1回増加する", () => {
+    render(<App />);
+
+    // 対象商品
+    expect(screen.getByTestId("coffee-count")).toHaveTextContent("0");
+    // それ以外
+    expect(screen.getByTestId("milk-count")).toHaveTextContent("0");
+    expect(screen.getByTestId("tea-count")).toHaveTextContent("0");
+    expect(screen.getByTestId("coke-count")).toHaveTextContent("0");
+    expect(screen.getByTestId("beer-count")).toHaveTextContent("0");
+
+    fireEvent.click(getButtonElementByText("コーヒー 480 円"));
+
+    // 対象商品
+    expect(screen.getByTestId("coffee-count")).toHaveTextContent("1");
+    // それ以外
+    expect(screen.getByTestId("milk-count")).toHaveTextContent("0");
+    expect(screen.getByTestId("tea-count")).toHaveTextContent("0");
+    expect(screen.getByTestId("coke-count")).toHaveTextContent("0");
+    expect(screen.getByTestId("beer-count")).toHaveTextContent("0");
+  });
 });
