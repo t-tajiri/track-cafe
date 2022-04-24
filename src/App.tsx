@@ -1,23 +1,55 @@
-import logo from "./logo.svg";
-import "./App.css";
-
 export function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="flex h-screen">
+      <div className="m-auto">
+        <div className="flex flex-col gap-5">
+          <button
+            id="coffee"
+            className="bg-white hover:bg-gray-100 border border-black py-2 px-4 rounded shadow"
+          >
+            <div className="w-32 flex justify-between">
+              <span>コーヒー</span>
+              <span>480 円</span>
+            </div>
+          </button>
+          <button
+            id="tea"
+            className="bg-white hover:bg-gray-100 border border-black py-2 px-4 rounded shadow"
+          >
+            <div className="w-32 flex justify-between">
+              <span>紅茶</span>
+              <span>280 円</span>
+            </div>
+          </button>
+          <button
+            id="milk"
+            className="bg-white hover:bg-gray-100 border border-black py-2 px-4 rounded shadow"
+          >
+            <div className="w-32 flex justify-between">
+              <span>ミルク</span>
+              <span>180 円</span>
+            </div>
+          </button>
+          <button
+            id="coke"
+            className="bg-white hover:bg-gray-100 border border-black py-2 px-4 rounded shadow"
+          >
+            <div className="w-32 flex justify-between">
+              <span>コーラ</span>
+              <span>190 円</span>
+            </div>
+          </button>
+          <button
+            id="beer"
+            className="bg-white hover:bg-gray-100 border border-black py-2 px-4 rounded shadow"
+          >
+            <div className="w-32 flex justify-between">
+              <span>ビール</span>
+              <span>580 円</span>
+            </div>
+          </button>
+        </div>
+      </div>
     </div>
   );
 }
