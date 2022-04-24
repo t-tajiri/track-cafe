@@ -179,6 +179,6 @@ describe("お会計テーブル", () => {
     fireEvent.click(getButtonElementByText("ビール 580 円"));
     fireEvent.click(getButtonElementByText("ビール 580 円"));
 
-    expect(screen.getByText("合計金額: 1420 円")).toBeInTheDocument();
+    expect(screen.getByText("合計金額: 2300 円")).toBeInTheDocument();
   });
 });
