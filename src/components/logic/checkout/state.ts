@@ -5,7 +5,7 @@ export const countState = atom<Map<string, number>>({
   default: new Map(),
 });
 
-export const counterSelector = selector({
+export const totalCountSelector = selector<number>({
   key: "counterSelector",
   get: ({ get }) => {
     const c = get(countState);
@@ -18,7 +18,7 @@ export const priceState = atom<Map<string, number>>({
   default: new Map(),
 });
 
-export const priceSelector = selector({
+export const totalPriceSelector = selector<number>({
   key: "priceSelector",
   get: ({ get }) => {
     const p = get(priceState);

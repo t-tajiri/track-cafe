@@ -1,9 +1,7 @@
-import { useRecoilValue } from "recoil";
-import { counterSelector, priceSelector } from "./state";
+import { useSumOfCheckout } from "./useSumOfCheckout";
 
 export const CheckoutTable: React.FC = () => {
-  const count = useRecoilValue(counterSelector);
-  const price = useRecoilValue(priceSelector);
+  const [count, price] = useSumOfCheckout();
 
   return (
     <div className="flex flex-col justify-center">
